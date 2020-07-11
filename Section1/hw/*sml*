@@ -1,0 +1,134 @@
+Standard ML of New Jersey v110.78 [built: Thu Jul 23 11:21:58 2015]
+- use "hw1.sml";
+[opening hw1.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[autoloading done]
+hw1.sml:86.5-86.128 Error: operator and operand don't agree [tycon mismatch]
+  operator domain: (int * int * int) list list * (int * int * int) list list
+  operand:         (int * int * int) list list * 
+                   ([int ty] * [int ty] * [int ty]) list
+  in expression:
+    dates_in_months
+      ((<exp>,<exp>,<exp>) :: <exp> :: <exp>,2 :: <exp> :: <exp>) =
+      (2012,2,28) :: (2011,3,31) :: (<exp>,<exp>,<exp>) :: nil
+
+uncaught exception Error
+  raised at: ../compiler/TopLevel/interact/evalloop.sml:66.19-66.27
+             ../compiler/TopLevel/interact/evalloop.sml:44.55
+             ../compiler/TopLevel/interact/evalloop.sml:292.17-292.20
+- use "hw1.sml";
+[opening hw1.sml]
+val get_year = fn : int * int * int -> int
+val get_month = fn : int * int * int -> int
+val get_day = fn : int * int * int -> int
+val is_older = fn : (int * int * int) * (int * int * int) -> bool
+val number_in_month = fn : (int * int * int) list * int -> int
+val number_in_months = fn : (int * int * int) list * int list -> int
+val dates_in_month = fn
+  : (int * int * int) list * int -> (int * int * int) list
+val dates_in_months = fn
+  : (int * int * int) list * int list -> (int * int * int) list list
+val test5 = [[(2012,2,28)],[(2011,3,31)],[(2011,4,28)]]
+  : (int * int * int) list list
+val get_nth = fn : string list * int -> string
+val month_vocabulary =
+  ["January","February","March","April","May","June","July","August",
+   "September","October","November","December"] : string list
+val date_to_string = fn : int * int * int -> string
+val number_before_reaching_sum = fn : int * int list -> int
+val number_days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31] : int list
+val what_month = fn : int -> int
+val month_range = fn : int * int -> int list
+val oldest = fn : (int * int * int) list -> (int * int * int) option
+val it = () : unit
+- use "hw1.sml";
+[opening hw1.sml]
+val get_year = fn : int * int * int -> int
+val get_month = fn : int * int * int -> int
+val get_day = fn : int * int * int -> int
+val is_older = fn : (int * int * int) * (int * int * int) -> bool
+val number_in_month = fn : (int * int * int) list * int -> int
+val number_in_months = fn : (int * int * int) list * int list -> int
+val dates_in_month = fn
+  : (int * int * int) list * int -> (int * int * int) list
+val dates_in_months = fn
+  : (int * int * int) list * int list -> (int * int * int) list list
+val test5 = true : bool
+val get_nth = fn : string list * int -> string
+val month_vocabulary =
+  ["January","February","March","April","May","June","July","August",
+   "September","October","November","December"] : string list
+val date_to_string = fn : int * int * int -> string
+val number_before_reaching_sum = fn : int * int list -> int
+val number_days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31] : int list
+val what_month = fn : int -> int
+val month_range = fn : int * int -> int list
+val oldest = fn : (int * int * int) list -> (int * int * int) option
+val it = () : unit
+- use "hw1.sml";
+[opening hw1.sml]
+val get_year = fn : int * int * int -> int
+val get_month = fn : int * int * int -> int
+val get_day = fn : int * int * int -> int
+val is_older = fn : (int * int * int) * (int * int * int) -> bool
+val number_in_month = fn : (int * int * int) list * int -> int
+val number_in_months = fn : (int * int * int) list * int list -> int
+val dates_in_month = fn
+  : (int * int * int) list * int -> (int * int * int) list
+val dates_in_months = fn
+  : (int * int * int) list * int list -> (int * int * int) list
+val test5 = true : bool
+val get_nth = fn : string list * int -> string
+val month_vocabulary =
+  ["January","February","March","April","May","June","July","August",
+   "September","October","November","December"] : string list
+val date_to_string = fn : int * int * int -> string
+val number_before_reaching_sum = fn : int * int list -> int
+val number_days_in_month = [31,28,31,30,31,30,31,31,30,31,30,31] : int list
+val what_month = fn : int -> int
+val month_range = fn : int * int -> int list
+val oldest = fn : (int * int * int) list -> (int * int * int) option
+val it = () : unit
+- 
+
+Process sml finished
+Standard ML of New Jersey v110.78 [built: Thu Jul 23 11:21:58 2015]
+- use "hw4.sml";
+[opening hw4.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[autoloading done]
+hw4.sml:110.47 Warning: calling polyEqual
+exception NoAnswer
+datatype pattern
+  = ConstP of int
+  | ConstructorP of string * pattern
+  | TupleP of pattern list
+  | UnitP
+  | Variable of string
+  | Wildcard
+datatype valu
+  = Const of int | Constructor of string * valu | Tuple of valu list | Unit
+val g = fn : (unit -> int) -> (string -> int) -> pattern -> int
+datatype typ
+  = Anything | Datatype of string | IntT | TupleT of typ list | UnitT
+val only_capitals = fn : string list -> string list
+val longest_string1 = fn : string list -> string
+val longest_string2 = fn : string list -> string
+val longest_string_helper = fn : (int * int -> bool) -> string list -> string
+val longest_string3 = fn : string list -> string
+val longest_string4 = fn : string list -> string
+val longest_capitalized = fn : string list -> string
+val rev_string = fn : string -> string
+val first_answer = fn : ('a -> 'b option) -> 'a list -> 'b
+val all_answers = fn : ('a -> 'b list option) -> 'a list -> 'b list option
+val count_wildcards = fn : pattern -> int
+val count_wild_and_variable_lengths = fn : pattern -> int
+val count_some_var = fn : string * pattern -> int
+val check_pat = fn : pattern -> bool
+val match = fn : valu * pattern -> (valu * string) list option
+val first_match = fn : valu -> pattern list -> (valu * string) list option
+val it = () : unit
+- use "yes
+= 
