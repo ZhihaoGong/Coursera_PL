@@ -38,11 +38,11 @@
 
 (mupllist->racketlist (apair (int 3) (apair (int 4) (aunit))))
   
+
 ;; CHANGE (put your solutions here)
 
 ;; Problem 2
-
-(define eval-exp)
+(define (eval-exp e))
 
 ;; lookup a variable in an environment
 ;; Do NOT change this function
